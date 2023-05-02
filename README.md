@@ -78,17 +78,23 @@ Shakespeare Language Modelling using GPT architecture
 This repository contains an implementation of a language model based on the GPT architecture trained on the complete works of Shakespeare.
 
 Overview
+
 This notebook implements a transformer based language model using PyTorch. The model is trained on the complete works of Shakespeare in the input.txt file. After training, the model can be used to generate new text given a starting prompt.
 
 Dependencies
+
 PyTorch
+
 Setup
+
 To run this code, you will need to upload the input.txt file to the same directory as the notebook. You can find the input.txt file here: https://raw.githubusercontent.com/karpathy/char-rnn/master/data/tinyshakespeare/input.txt
 
 Model Architecture
+
 The model consists of several Transformer blocks, each containing a Multi-Head Attention layer followed by a Feed-Forward layer. The final output layer is a linear layer followed by a softmax activation function. The model uses the Adam optimizer with a learning rate of 1e-3.
 
 Hyperparameters
+
 batch_size = 16
 block_size = 32
 max_iters = 5000
@@ -104,9 +110,11 @@ Training
 The model is trained on the complete works of Shakespeare, split into a 90% training set and a 10% validation set. The model is trained for 5000 iterations with a batch size of 16.
 
 Evaluation
+
 The model is evaluated on the training and validation sets every 100 iterations using a batch size of 16. The loss is calculated using cross-entropy loss.
 
 Output
+
 After training, the model can be used to generate new text given a starting prompt. The model uses a temperature parameter to control the randomness of the generated text. A higher temperature value will result in more random text, while a lower temperature value will result in text that is more similar to the training data.
 
 
